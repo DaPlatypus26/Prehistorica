@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bone",
+    "minecraft:bone_meal",
+    "minecraft:coal",
+    "minecraft:flint",
+    "minecraft:dirt",
+    "minecraft:sand",
+    "prehistorica:diplocaulus_dna"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "block.prehistorica.fossil_ore": "Fossil Ore",
+  "block.prehistorica.deepslate_fossil_ore": "Deepslate Fossil Ore",
+  "block.prehistorica.amber_ore": "Amber Ore",
+  "block.prehistorica.deepslate_amber_ore": "Deepslate Amber Ore",
+
+  "item.prehistorica.fossil": "Fossil",
+  "item.prehistorica.plant_fossil": "Plant Fossil",
+  "item.prehistorica.mosquito_in_amber": "Amber",
+  "item.prehistorica.bug_in_amber": "Mosquito in Amber",
+  "item.prehistorica.bug_in_amber": "Bug in Amber",
+  "item.prehistorica.crab_in_amber": "Crab in Amber",
+  "item.prehistorica.plant_in_amber": "Plant in Amber",
+  "item.prehistorica.diplocaulus_dna": "Diplocaulus DNA",
+  "block.prehistorica.diplocaulus_egg": "Diplocaulus Egg",
+
+  "item.prehistorica.diplocaulus_spawn_egg": "Diplocaulus Spawn Egg",
+
+  "itemGroup.prehistorica.blocks": "Prehistorica Blocks",
+  "itemGroup.prehistorica.items": "Prehistorica Items",
+  "itemGroup.prehistorica.spawneggs": "Prehistorica Spawn Eggs",
+
+  "entity.prehistorica.diplocaulus": "Diplocaulus"
+}

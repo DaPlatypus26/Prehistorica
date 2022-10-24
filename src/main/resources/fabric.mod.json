@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "prehistorica",
+  "version": "${version}",
+  "name": "Prehistorica",
+  "description": "",
+  "authors": [
+    "Perry"
+  ],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/prehistorica/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.perry.prehistorica.client.PrehistoricaClient"
+    ],
+    "main": [
+      "net.perry.prehistorica.Prehistorica"
+    ]
+  },
+  "mixins": [
+    "prehistorica.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}

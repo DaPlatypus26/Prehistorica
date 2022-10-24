@@ -1,0 +1,94 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "name": "prehistorica:deepslate_amber_ore"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "prehistorica:amber",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.166
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "prehistorica:mosquito_in_amber",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.333
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "prehistorica:bug_in_amber",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.5
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "prehistorica:crab_in_amber",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.666
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "prehistorica:plant_in_amber",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.833
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:cobbled_deepslate",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 1.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

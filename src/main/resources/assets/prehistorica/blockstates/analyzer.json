@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prehistorica:block/analyzer"
+    },
+    "facing=south": {
+      "model": "prehistorica:block/analyzer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prehistorica:block/analyzer",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "prehistorica:block/analyzer",
+      "y": 90
+    }
+  }
+}

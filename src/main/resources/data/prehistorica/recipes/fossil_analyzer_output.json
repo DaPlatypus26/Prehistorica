@@ -1,0 +1,11 @@
+{
+  "type": "prehistorica:analyzing",
+  "ingredients": [
+    {
+      "item": "prehistorica:fossil"
+    }
+  ],
+  "output": {
+    "item": "minecraft:bone"
+  }
+}
