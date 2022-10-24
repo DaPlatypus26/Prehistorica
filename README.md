@@ -16,6 +16,7 @@ Prehistorica is a vanilla styled Fabric mod that adds paleontologically accurate
 | 1.17.1   | ❌       | ❌       |
 | 1.17     | ❌       | ❌       |
 
+# Supported Mods
 
 # Todo
 It's planned to release an update with new mobs every month.  Here is a list of things that will definitely come to the mod.
