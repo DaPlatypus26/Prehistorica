@@ -22,6 +22,6 @@ It's planned to release an update with new mobs every month.  Here is a list of 
 - [ ] Paleozoic Content
 - [ ] Cenozoic Content
 - [ ] Archeology Content
-  - [ ] Deepdark Lore
-  - [ ] Better Pyramids & Jungle Temples
+ - [ ] Deepdark Lore
+ - [ ] Better Pyramids & Jungle Temples
 - [ ] Geological Period Dimensions
