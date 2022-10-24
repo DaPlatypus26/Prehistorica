@@ -1,7 +1,8 @@
 # Prehistorica
-Prehistorica is a vanilla styled mod that adds paleontologically accurate dinosaurs and other prehistoric animals to Minecraft.
+Prehistorica is a vanilla styled Fabric mod that adds paleontologically accurate dinosaurs and other prehistoric animals to Minecraft.
 
 # Dependencies
+* (GeckoLib)[https://www.curseforge.com/minecraft/mc-mods/geckolib]
 
 # Supported Versions 
 
