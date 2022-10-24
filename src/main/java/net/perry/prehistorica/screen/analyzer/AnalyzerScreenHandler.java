@@ -16,7 +16,7 @@ public class AnalyzerScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
 
     public AnalyzerScreenHandler(int syncId, PlayerInventory inventory) {
-        this(syncId, inventory, new SimpleInventory(3), new ArrayPropertyDelegate(2));
+        this(syncId, inventory, new SimpleInventory(18), new ArrayPropertyDelegate(2));
     }
 
     public AnalyzerScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
@@ -26,8 +26,25 @@ public class AnalyzerScreenHandler extends ScreenHandler {
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new Slot(inventory, 0, 86, 15));
-        this.addSlot(new Slot(inventory, 1, 86, 60));
+        this.addSlot(new Slot(inventory, 0, 17, 19));
+        this.addSlot(new Slot(inventory, 1, 35, 19));
+        this.addSlot(new Slot(inventory, 2, 53, 19));
+        this.addSlot(new Slot(inventory, 3, 17, 37));
+        this.addSlot(new Slot(inventory, 4, 35, 37));
+        this.addSlot(new Slot(inventory, 5, 53, 37));
+        this.addSlot(new Slot(inventory, 6, 17, 55));
+        this.addSlot(new Slot(inventory, 7, 35, 55));
+        this.addSlot(new Slot(inventory, 8, 53, 55));
+
+        this.addSlot(new Slot(inventory, 9, 98, 19));
+        this.addSlot(new Slot(inventory, 10, 116, 19));
+        this.addSlot(new Slot(inventory, 11, 134, 19));
+        this.addSlot(new Slot(inventory, 12, 98, 37));
+        this.addSlot(new Slot(inventory, 13, 116, 37));
+        this.addSlot(new Slot(inventory, 14, 134, 37));
+        this.addSlot(new Slot(inventory, 15, 98, 55));
+        this.addSlot(new Slot(inventory, 16, 116, 55));
+        this.addSlot(new Slot(inventory, 17, 134, 55));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

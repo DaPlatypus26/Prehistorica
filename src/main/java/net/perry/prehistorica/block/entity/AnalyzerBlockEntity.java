@@ -30,7 +30,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2, ItemStack.EMPTY);
+    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(18, ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
@@ -117,17 +117,30 @@ public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<AnalyzerRecipe> recipe = entity.getWorld().getRecipeManager()
-                .getFirstMatch(AnalyzerRecipe.Type.INSTANCE, inventory, entity.getWorld());
-
         if(hasRecipe(entity)) {
             entity.removeStack(0, 1);
 
             Optional<RegistryEntryList.Named<Item>> tagList = Registry.ITEM.getEntryList(ModTags.Items.ANALYZER_OUTPUT);
             Item output = tagList.flatMap(list -> list.getRandom(Random.create())).get().value();
 
-            entity.setStack(1, new ItemStack(output,
-                    entity.getStack(1).getCount() + 1));
+            if(entity.getStack(9).isEmpty())
+                entity.setStack(9, new ItemStack(output, 1));
+            else if(entity.getStack(10).isEmpty())
+                entity.setStack(10, new ItemStack(output, 1));
+            else if(entity.getStack(11).isEmpty())
+                entity.setStack(11, new ItemStack(output, 1));
+            else if(entity.getStack(12).isEmpty())
+                entity.setStack(12, new ItemStack(output, 1));
+            else if(entity.getStack(13).isEmpty())
+                entity.setStack(13, new ItemStack(output, 1));
+            else if(entity.getStack(14).isEmpty())
+                entity.setStack(14, new ItemStack(output, 1));
+            else if(entity.getStack(15).isEmpty())
+                entity.setStack(15, new ItemStack(output, 1));
+            else if(entity.getStack(16).isEmpty())
+                entity.setStack(16, new ItemStack(output, 1));
+            else if(entity.getStack(17).isEmpty())
+                entity.setStack(17, new ItemStack(output, 1));
 
             entity.resetProgress();
         }
@@ -142,15 +155,18 @@ public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandl
         Optional<AnalyzerRecipe> match = entity.getWorld().getRecipeManager()
                 .getFirstMatch(AnalyzerRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
-        return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput().getItem());
+        return match.isPresent() && canInsertItemIntoOutputSlot(inventory);
     }
 
-    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
-        return /*inventory.getStack(1).getItem() == output ||*/ inventory.getStack(1).isEmpty();
-    }
-
-    private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {
-        return inventory.getStack(1).getMaxCount() > inventory.getStack(1).getCount();
+    private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory) {
+        return inventory.getStack(9).isEmpty() ||
+                inventory.getStack(10).isEmpty() ||
+                inventory.getStack(11).isEmpty() ||
+                inventory.getStack(12).isEmpty() ||
+                inventory.getStack(13).isEmpty() ||
+                inventory.getStack(14).isEmpty() ||
+                inventory.getStack(15).isEmpty() ||
+                inventory.getStack(16).isEmpty() ||
+                inventory.getStack(17).isEmpty();
     }
 }
