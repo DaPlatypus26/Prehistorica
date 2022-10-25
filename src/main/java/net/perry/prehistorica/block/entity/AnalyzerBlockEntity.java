@@ -8,21 +8,21 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
-import net.minecraft.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntryList;
 import net.minecraft.world.World;
 import net.perry.prehistorica.recipe.AnalyzerRecipe;
 import net.perry.prehistorica.register.ModBlocksEntities;
-import net.perry.prehistorica.register.ModItems;
 import net.perry.prehistorica.register.ModTags;
 import net.perry.prehistorica.screen.analyzer.AnalyzerScreenHandler;
 import org.jetbrains.annotations.Nullable;
@@ -94,6 +94,16 @@ public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandl
         this.progress = 0;
     }
 
+    @Override
+    public boolean canInsert(int slot, ItemStack stack, @Nullable Direction side) {
+        return side != Direction.DOWN && slot < 9;
+    }
+
+    @Override
+    public boolean canExtract(int slot, ItemStack stack, @Nullable Direction side) {
+        return side == Direction.DOWN && slot > 8;
+    }
+
     public static void tick(World world, BlockPos blockPos, BlockState state, AnalyzerBlockEntity entity) {
         if(world.isClient()) {
             return;
@@ -117,11 +127,22 @@ public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandl
             inventory.setStack(i, entity.getStack(i));
         }
 
-        if(hasRecipe(entity)) {
-            entity.removeStack(0, 1);
+        Optional<AnalyzerRecipe> recipe = entity.getWorld().getRecipeManager()
+                .getFirstMatch(AnalyzerRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
-            Optional<RegistryEntryList.Named<Item>> tagList = Registry.ITEM.getEntryList(ModTags.Items.ANALYZER_OUTPUT);
-            Item output = tagList.flatMap(list -> list.getRandom(Random.create())).get().value();
+        if(hasRecipe(entity)) {
+            entity.removeStack(AnalyzerRecipe.getSlot(), 1);
+
+            //TagLists for output
+            Optional<RegistryEntryList.Named<Item>> fossilAnalyzerOutputTagList = Registry.ITEM.getEntryList(ModTags.Items.FOSSIL_ANALYZER_OUTPUT);
+
+            Item output;
+            String recipeName = recipe.get().getOutput().getItem().toString() + "_analyzer_output.json";
+
+            if(recipeName.equals("fossil_analyzer_output.json"))
+                output = fossilAnalyzerOutputTagList.flatMap(list -> list.getRandom(Random.create())).get().value();
+            else
+                output = Items.BONE;
 
             if(entity.getStack(9).isEmpty())
                 entity.setStack(9, new ItemStack(output, 1));

@@ -3,27 +3,20 @@ package net.perry.prehistorica.recipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
-import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryEntryList;
 import net.minecraft.world.World;
-import net.perry.prehistorica.register.ModTags;
-
-import java.util.Optional;
 
 public class AnalyzerRecipe implements Recipe<SimpleInventory> {
 
     private final Identifier id;
     private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
+    private static int slot;
 
     public AnalyzerRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
         this.id = id;
@@ -33,11 +26,43 @@ public class AnalyzerRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
-        if(world.isClient()) {
+        if(world.isClient())
+            return false;
+
+        if(recipeItems.get(0).test(inventory.getStack(0))) {
+            slot = 0;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(1))) {
+            slot = 1;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(2))) {
+            slot = 2;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(3))) {
+            slot = 3;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(4))) {
+            slot = 4;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(5))) {
+            slot = 5;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(6))) {
+            slot = 6;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(7))) {
+            slot = 7;
+            return true;
+        } else if(recipeItems.get(0).test(inventory.getStack(8))) {
+            slot = 8;
+            return true;
+        } else {
             return false;
         }
+    }
 
-        return recipeItems.get(0).test(inventory.getStack(0));
+    public static int getSlot() {
+        return slot;
     }
 
     @Override
