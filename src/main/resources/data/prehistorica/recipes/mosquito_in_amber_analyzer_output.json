@@ -2,10 +2,10 @@
   "type": "prehistorica:analyzing",
   "ingredients": [
     {
-      "item": "prehistorica:fossil"
+      "item": "prehistorica:mosquito_in_amber"
     }
   ],
   "output": {
-    "item": "prehistorica:fossil"
+    "item": "prehistorica:mosquito_in_amber"
   }
 }

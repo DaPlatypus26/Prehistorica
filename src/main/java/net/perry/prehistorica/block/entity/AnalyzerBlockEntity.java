@@ -135,14 +135,17 @@ public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandl
 
             //TagLists for output
             Optional<RegistryEntryList.Named<Item>> fossilAnalyzerOutputTagList = Registry.ITEM.getEntryList(ModTags.Items.FOSSIL_ANALYZER_OUTPUT);
+            Optional<RegistryEntryList.Named<Item>> mosquitoInAmberAnalyzerOutputTagList = Registry.ITEM.getEntryList(ModTags.Items.MOSQUITO_IN_AMBER_ANALYZER_OUTPUT);
 
             Item output;
             String recipeName = recipe.get().getOutput().getItem().toString() + "_analyzer_output.json";
 
             if(recipeName.equals("fossil_analyzer_output.json"))
                 output = fossilAnalyzerOutputTagList.flatMap(list -> list.getRandom(Random.create())).get().value();
+            else if(recipeName.equals("mosquito_in_amber_analyzer_output.json"))
+                output = mosquitoInAmberAnalyzerOutputTagList.flatMap(list -> list.getRandom(Random.create())).get().value();
             else
-                output = Items.BONE;
+                output = Items.AIR;
 
             if(entity.getStack(9).isEmpty())
                 entity.setStack(9, new ItemStack(output, 1));
