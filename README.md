@@ -1,5 +1,9 @@
 # Prehistorica
-Prehistorica is a vanilla styled Fabric mod that adds paleontologically accurate dinosaurs and other prehistoric animals to Minecraft.
+Prehistorica is a Minecraft Fabric mod that brings paleontology and archaeology to the game, adding a touch of science and history to your Minecraft experience.
+
+With Prehistorica, you can discover a wide variety of prehistoric creatures, including dinosaurs, ice age animals, and stone age humans. Explore new structures and encounter mythical beings as you journey through the ages.
+
+Prehistorica adds a rich and immersive lore to Minecraft, allowing you to learn about the fascinating creatures and civilizations that inhabited the world long before us. So why wait? Step into the past with Prehistorica and discover the mysteries of prehistory in Minecraft.
 
 # Dependencies
 * [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib)
