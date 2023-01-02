@@ -4,6 +4,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.perry.prehistorica.Prehistorica;
 import net.perry.prehistorica.recipe.AnalyzerRecipe;
+import net.perry.prehistorica.recipe.IncubatorRecipe;
 
 public class ModRecipes {
     public static void registerModRecipes() {
@@ -11,5 +12,10 @@ public class ModRecipes {
                 AnalyzerRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(Prehistorica.MOD_ID, AnalyzerRecipe.Type.ID),
                 AnalyzerRecipe.Type.INSTANCE);
+
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(Prehistorica.MOD_ID, IncubatorRecipe.Serializer.ID),
+                IncubatorRecipe.Serializer.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(Prehistorica.MOD_ID, IncubatorRecipe.Type.ID),
+                IncubatorRecipe.Type.INSTANCE);
     }
 }

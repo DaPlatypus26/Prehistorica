@@ -1,4 +1,4 @@
-package net.perry.prehistorica.block.entity;
+package net.perry.prehistorica.block.entity.analyzer;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -21,6 +21,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntryList;
 import net.minecraft.world.World;
+import net.perry.prehistorica.block.entity.ImplementedInventory;
 import net.perry.prehistorica.recipe.AnalyzerRecipe;
 import net.perry.prehistorica.register.ModBlocksEntities;
 import net.perry.prehistorica.register.ModTags;
@@ -80,14 +81,14 @@ public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandl
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("gem_infusing_station.progress", progress);
+        nbt.putInt("analyzer.progress", progress);
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
         Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
-        progress = nbt.getInt("gem_infusing_station.progress");
+        progress = nbt.getInt("analyzer.progress");
     }
 
     private void resetProgress() {

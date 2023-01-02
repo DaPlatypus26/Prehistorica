@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prehistorica:block/incubator"
+    },
+    "facing=south": {
+      "model": "prehistorica:block/incubator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prehistorica:block/incubator",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "prehistorica:block/incubator",
+      "y": 90
+    }
+  }
+}

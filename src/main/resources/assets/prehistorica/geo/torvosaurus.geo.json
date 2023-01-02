@@ -1,0 +1,148 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unknown",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 14,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Torvosaurus",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "Torvosaurus",
+					"pivot": [0, 40, -11],
+					"cubes": [
+						{"origin": [-9.7, 79, -105], "size": [20, 27, 28], "pivot": [-11.7, 23, -68], "rotation": [-95, 0, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "upperbody",
+					"parent": "body",
+					"pivot": [-11.7, 41, -9],
+					"rotation": [2.5, 0, 0],
+					"cubes": [
+						{"origin": [-7.7, 54, -103], "size": [16, 25, 25], "pivot": [-11.7, 23, -67], "rotation": [-95, 0, 0], "uv": [71, 30]}
+					]
+				},
+				{
+					"name": "arm",
+					"parent": "upperbody",
+					"pivot": [-8, 34, -28],
+					"cubes": [
+						{"origin": [-11.7, 59, -82], "size": [4, 8, 20], "pivot": [-11.7, 23, -68], "rotation": [-90, 0, 0], "uv": [108, 147]}
+					]
+				},
+				{
+					"name": "arm2",
+					"parent": "upperbody",
+					"pivot": [8, 34, -28],
+					"cubes": [
+						{"origin": [7.7, 59, -82], "size": [4, 8, 20], "pivot": [11.7, 23, -68], "rotation": [-90, 0, 0], "uv": [0, 147]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "upperbody",
+					"pivot": [-11.7, 41, -29]
+				},
+				{
+					"name": "neck",
+					"parent": "head",
+					"pivot": [0, 42, -29],
+					"cubes": [
+						{"origin": [-5.7, 27.01594, -73.19482], "size": [12, 16, 32], "pivot": [-13.3, 26.01594, -36.19482], "rotation": [-72.5, 0, 0], "uv": [0, 55]}
+					]
+				},
+				{
+					"name": "head2",
+					"parent": "neck",
+					"pivot": [0, 56, -40],
+					"cubes": [
+						{"origin": [-6.7, 43, -100], "size": [14, 12, 16], "pivot": [-11.7, 23, -64], "rotation": [-80, 0, 0], "uv": [68, 0]},
+						{"origin": [-4.7, 23, -100], "size": [10, 20, 10], "pivot": [-11.7, 23, -64], "rotation": [-80, 0, 0], "uv": [154, 88]}
+					]
+				},
+				{
+					"name": "lower",
+					"parent": "head2",
+					"pivot": [0, 52, -49],
+					"cubes": [
+						{"origin": [-3.7, 25, -90], "size": [8, 18, 6], "pivot": [-11.7, 23, -64], "rotation": [-80, 0, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "tail",
+					"parent": "body",
+					"pivot": [0, 42, 16],
+					"cubes": [
+						{"origin": [-6.7, 94, -94], "size": [14, 28, 22], "pivot": [-11.7, 20, -60], "rotation": [-92.5, 0, 0], "uv": [66, 81]}
+					]
+				},
+				{
+					"name": "tail2",
+					"parent": "tail",
+					"pivot": [0, 38, 44],
+					"cubes": [
+						{"origin": [-3.7, 116, -98], "size": [8, 56, 12], "pivot": [-11.7, 20, -60], "rotation": [-97.5, 0, 0], "uv": [68, 131]}
+					]
+				},
+				{
+					"name": "leg",
+					"parent": "Torvosaurus",
+					"pivot": [6, 37, 4],
+					"cubes": [
+						{"origin": [5.3, 78, -92], "size": [8, 16, 26], "pivot": [-11.7, 23, -61], "rotation": [-95, 0, 0], "uv": [112, 105]}
+					]
+				},
+				{
+					"name": "lowerleg",
+					"parent": "leg",
+					"pivot": [9, 25, 6],
+					"cubes": [
+						{"origin": [6.3, 90, -68], "size": [6, 8, 26], "pivot": [-11.7, 23, -61], "rotation": [-90, 0, 0], "uv": [128, 0]}
+					]
+				},
+				{
+					"name": "foot",
+					"parent": "lowerleg",
+					"pivot": [9, 6, 10],
+					"cubes": [
+						{"origin": [4.3, 83, -43], "size": [10, 16, 5], "pivot": [-11.7, 23, -61], "rotation": [-90, 0, 0], "uv": [156, 147]}
+					]
+				},
+				{
+					"name": "leg2",
+					"parent": "Torvosaurus",
+					"pivot": [-6, 37, 4],
+					"cubes": [
+						{"origin": [-13.3, 78, -92], "size": [8, 16, 26], "pivot": [11.7, 23, -61], "rotation": [-95, 0, 0], "uv": [0, 105]}
+					]
+				},
+				{
+					"name": "lowerleg2",
+					"parent": "leg2",
+					"pivot": [-9, 25, 6],
+					"cubes": [
+						{"origin": [-12.3, 90, -68], "size": [6, 8, 26], "pivot": [11.7, 23, -61], "rotation": [-90, 0, 0], "uv": [127, 54]}
+					]
+				},
+				{
+					"name": "foot2",
+					"parent": "lowerleg2",
+					"pivot": [-9, 6, 10],
+					"cubes": [
+						{"origin": [-14.3, 83, -43], "size": [10, 16, 5], "pivot": [11.7, 23, -61], "rotation": [-90, 0, 0], "uv": [0, 55]}
+					]
+				}
+			]
+		}
+	]
+}

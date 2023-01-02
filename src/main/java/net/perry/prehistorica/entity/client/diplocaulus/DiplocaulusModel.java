@@ -1,4 +1,4 @@
-package net.perry.prehistorica.entity.client;
+package net.perry.prehistorica.entity.client.diplocaulus;
 
 import net.minecraft.util.Identifier;
 import net.perry.prehistorica.Prehistorica;

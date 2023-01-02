@@ -7,7 +7,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.perry.prehistorica.Prehistorica;
 import net.perry.prehistorica.block.AmphibianEgg;
-import net.perry.prehistorica.block.entity.AnalyzerBlock;
+import net.perry.prehistorica.block.entity.analyzer.AnalyzerBlock;
+import net.perry.prehistorica.block.entity.incubator.IncubatorBlock;
 
 public class ModBlocks {
     //Blocks
@@ -21,8 +22,10 @@ public class ModBlocks {
             .strength(3.0f).resistance(6.0F).sounds(BlockSoundGroup.DEEPSLATE).requiresTool());
     public static final Block ANALYZER = new AnalyzerBlock(FabricBlockSettings.of(Material.METAL, MapColor.IRON_GRAY)
             .strength(4.0f).resistance(5.0F).sounds(BlockSoundGroup.METAL).requiresTool().nonOpaque());
+    public static final Block INCUBATOR = new IncubatorBlock(FabricBlockSettings.of(Material.METAL, MapColor.IRON_GRAY)
+            .strength(4.0f).resistance(5.0F).sounds(BlockSoundGroup.METAL).requiresTool().nonOpaque());
     //Items
-    public static final AmphibianEgg DIPLOCAULUS_EGG = new AmphibianEgg(ModEntities.DIPLOCAULUS, FabricBlockSettings.of(Material.EGG, MapColor.BROWN)
+    public static final AmphibianEgg DIPLOCAULUS_EGGS = new AmphibianEgg(ModEntities.DIPLOCAULUS, FabricBlockSettings.of(Material.EGG, MapColor.BROWN)
             .noCollision().nonOpaque().breakInstantly().sounds(BlockSoundGroup.FROGSPAWN));
 
     private static void registerBlock(String name, Block block) {
@@ -35,7 +38,8 @@ public class ModBlocks {
         registerBlock("amber_ore", AMBER_ORE);
         registerBlock("deepslate_amber_ore", DEEPSLATE_AMBER_ORE);
         registerBlock("analyzer", ANALYZER);
+        registerBlock("incubator", INCUBATOR);
 
-        registerBlock("diplocaulus_egg", DIPLOCAULUS_EGG);
+        registerBlock("diplocaulus_eggs", DIPLOCAULUS_EGGS);
     }
 }

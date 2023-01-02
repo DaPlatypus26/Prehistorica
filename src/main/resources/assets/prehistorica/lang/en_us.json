@@ -12,18 +12,21 @@
   "item.prehistorica.crab_in_amber": "Crab in Amber",
   "item.prehistorica.plant_in_amber": "Plant in Amber",
   "item.prehistorica.tyrannosaurus_rex_dna": "Tyrannosaurus Rex DNA",
+  "item.prehistorica.torvosaurus_dna": "Torvosaurus DNA",
   "item.prehistorica.stegosaurus_dna": "Stegosaurus DNA",
   "item.prehistorica.triceratops_dna": "Triceratops DNA",
   "item.prehistorica.velociraptor_dna": "Velociraptor DNA",
   "item.prehistorica.dilophosaurus_dna": "Dilophosaurus DNA",
   "item.prehistorica.diplocaulus_dna": "Diplocaulus DNA",
-  "block.prehistorica.diplocaulus_egg": "Diplocaulus Egg",
+  "block.prehistorica.diplocaulus_eggs": "Diplocaulus Eggs",
 
+  "item.prehistorica.torvosaurus_spawn_egg": "Torvosaurus Spawn Egg",
   "item.prehistorica.diplocaulus_spawn_egg": "Diplocaulus Spawn Egg",
 
   "itemGroup.prehistorica.blocks": "Prehistorica Blocks",
   "itemGroup.prehistorica.items": "Prehistorica Items",
   "itemGroup.prehistorica.spawneggs": "Prehistorica Spawn Eggs",
 
+  "entity.prehistorica.torvosaurus": "Torvosaurus",
   "entity.prehistorica.diplocaulus": "Diplocaulus"
 }

@@ -1,0 +1,247 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.torvosaurus.attack": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"tail": {
+					"rotation": {
+						"vector": [-7.5, 0, 0]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"vector": [15, 0, 0]
+					}
+				},
+				"tail3": {
+					"rotation": {
+						"vector": [-22.5, 0, 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": {
+								"vector": [-15, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": {
+								"vector": [17.5, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"neck": {
+					"rotation": {
+						"0.0": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": {
+								"vector": [-30, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": {
+								"vector": [35.48238, 1.21135, 0.89063]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					},
+					"position": {
+						"0.0": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": {
+								"vector": [0, 0, 4]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"lower": {
+					"rotation": {
+						"0.0": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": {
+								"vector": [40, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": {
+								"vector": [0, 0, 0]
+							},
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.torvosaurus.walk": {
+			"loop": true,
+			"animation_length": 60,
+			"bones": {
+				"tail": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*200)*2.5", "Math.sin(query.anim_time*200)*10", 0]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*200)*-10", "Math.sin(-40+query.anim_time*200)*20", 0]
+					}
+				},
+				"tail3": {
+					"rotation": {
+						"vector": ["-22.5+Math.cos(query.anim_time*300)*10", "Math.cos(-80+query.anim_time*300)*40", 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*200)*3", 0, 0]
+					},
+					"position": {
+						"vector": [0, "Math.sin(query.anim_time*200)*2", 0]
+					}
+				},
+				"neck": {
+					"rotation": {
+						"vector": ["Math.sin(-query.anim_time*200)*5", 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"vector": [0, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, 0]
+					}
+				},
+				"lower": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*200)*5+10", 0, 0]
+					}
+				},
+				"leg": {
+					"rotation": {
+						"vector": ["-Math.sin(query.anim_time*200)*20", 0, 0]
+					},
+					"position": {
+						"vector": [0, "-Math.sin(query.anim_time*200)*2.5", 0]
+					}
+				},
+				"leg2": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*200)*20", 0, 0]
+					},
+					"position": {
+						"vector": [0, "Math.sin(query.anim_time*200)*2.5", 0]
+					}
+				},
+				"tyrannosaurusrex": {
+					"position": {
+						"vector": [0, "Math.cos(query.anim_time*300)*-4", 0]
+					}
+				},
+				"lowerleg": {
+					"rotation": {
+						"vector": ["math.clamp(-math.sin(query.anim_time*200)*20,-10,60)", 0, 0]
+					}
+				},
+				"foot": {
+					"rotation": {
+						"vector": ["math.clamp(-math.sin(query.anim_time*200)*20)", 0, 0]
+					}
+				},
+				"lowerleg2": {
+					"rotation": {
+						"vector": ["math.clamp(math.sin(query.anim_time*200)*20,-10,60)", 0, 0]
+					}
+				},
+				"foot2": {
+					"rotation": {
+						"vector": ["math.clamp(math.sin(query.anim_time*200)*20)", 0, 0]
+					}
+				}
+			}
+		},
+		"animation.torvosaurus.idle": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": {
+						"vector": [-7.5, "Math.cos(query.anim_time*100)*10", 0]
+					}
+				},
+				"tail2": {
+					"rotation": {
+						"vector": [15, "Math.cos(-40+query.anim_time*100)*10", 0]
+					}
+				},
+				"tail3": {
+					"rotation": {
+						"vector": [-12.5, "Math.cos(-80+query.anim_time*100)*20", 0]
+					}
+				},
+				"body": {
+					"position": {
+						"vector": [0, "Math.sin(query.anim_time*100)*0.5", 0]
+					}
+				},
+				"neck": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*100)*2+1", 0, 0]
+					}
+				},
+				"lower": {
+					"rotation": {
+						"vector": ["Math.sin(query.anim_time*100)*2+2.5", 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "type": "prehistorica:incubating",
+  "ingredients": [
+    {
+      "item": "prehistorica:diplocaulus_eggs",
+      "item": "prehistorica:water_bucket"
+    }
+  ],
+  "output": {
+    "item": "prehistorica:amber"
+  }
+}

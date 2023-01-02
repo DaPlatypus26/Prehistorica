@@ -1,4 +1,4 @@
-package net.perry.prehistorica.block.entity;
+package net.perry.prehistorica.block.entity.analyzer;
 
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
