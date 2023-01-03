@@ -9,12 +9,12 @@ Prehistorica adds a rich and immersive lore to Minecraft, allowing you to learn 
 * [GeckoLib](https://www.curseforge.com/minecraft/mc-mods/geckolib)
 
 # Supported Versions 
-| Version  | Fabric   | Forge    |
-|----------|----------|----------|
-| 1.19.3   | ❌       | ❌       |
-| 1.19.2   | ✅       | ❌       |
-| 1.19.1   | ❌       | ❌       |
-| 1.19     | ❌       | ❌       |
+| Version     | Fabric      | Forge       | Mod Version |
+|-------------|-------------|-------------|-------------|
+| 1.19.3      | ❌         | ❌          | ❌          |
+| 1.19.2      | ✅         | ❌          | 1.0         |
+| 1.19.1      | ❌         | ❌          | ❌          |
+| 1.19        | ❌         | ❌          | ❌          |
 
 # Supported Mods
 
