@@ -1,0 +1,14 @@
+{
+  "type": "prehistorica:implementing",
+  "ingredients": [
+    {
+      "item": "prehistorica:diplocaulus_dna"
+    },
+    {
+      "item": "minecraft:frogspawn"
+    }
+  ],
+  "output": {
+    "item": "prehistorica:diplocaulus_eggs"
+  }
+}

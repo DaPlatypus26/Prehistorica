@@ -2,7 +2,7 @@ package net.perry.prehistorica;
 
 import net.fabricmc.api.ModInitializer;
 import net.perry.prehistorica.register.*;
-import net.perry.prehistorica.screen.ModScreenHandlers;
+import net.perry.prehistorica.register.ModScreenHandlers;
 import software.bernie.geckolib3.GeckoLib;
 
 public class Prehistorica implements ModInitializer {

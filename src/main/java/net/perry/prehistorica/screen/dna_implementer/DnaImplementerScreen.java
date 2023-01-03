@@ -1,4 +1,4 @@
-package net.perry.prehistorica.screen.incubator;
+package net.perry.prehistorica.screen.dna_implementer;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
@@ -9,11 +9,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.perry.prehistorica.Prehistorica;
 
-public class IncubatorScreen extends HandledScreen<IncubatorScreenHandler> {
+public class DnaImplementerScreen extends HandledScreen<DnaImplementerScreenHandler> {
     private static final Identifier TEXTURE =
-            new Identifier(Prehistorica.MOD_ID, "textures/gui/incubator_gui.png");
+            new Identifier(Prehistorica.MOD_ID, "textures/gui/dna_implementer_gui.png");
 
-    public IncubatorScreen(IncubatorScreenHandler handler, PlayerInventory inventory, Text title) {
+    public DnaImplementerScreen(DnaImplementerScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 

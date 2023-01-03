@@ -16,7 +16,9 @@ public class ModItems {
     public static final BlockItem AMBER_ORE = new BlockItem(ModBlocks.AMBER_ORE, new FabricItemSettings().group(ModItemGroups.blockTab));
     public static final BlockItem DEEPSLATE_AMBER_ORE = new BlockItem(ModBlocks.DEEPSLATE_AMBER_ORE, new FabricItemSettings().group(ModItemGroups.blockTab));
     public static final BlockItem ANALYZER = new BlockItem(ModBlocks.ANALYZER, new FabricItemSettings().group(ModItemGroups.blockTab));
+    public static final BlockItem DNA_IMPLEMENTER = new BlockItem(ModBlocks.DNA_IMPLEMENTER, new FabricItemSettings().group(ModItemGroups.blockTab));
     public static final BlockItem INCUBATOR = new BlockItem(ModBlocks.INCUBATOR, new FabricItemSettings().group(ModItemGroups.blockTab));
+    public static final BlockItem MICROSCOPE = new BlockItem(ModBlocks.MICROSCOPE, new FabricItemSettings().group(ModItemGroups.blockTab));
 
     //Items
     public static final Item FOSSIL = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
@@ -38,8 +40,8 @@ public class ModItems {
     public static final BlockItem DIPLOCAULUS_EGGS = new PlaceableOnWaterItem(ModBlocks.DIPLOCAULUS_EGGS, new FabricItemSettings().group(ModItemGroups.itemTab));
 
     //SpawnEggs
-    public static final SpawnEggItem TORVOSAURUS_SPAWN_EGG = new SpawnEggItem(ModEntities.TORVOSAURUS, 0x392e29, 0x8a604c, new FabricItemSettings().group(ModItemGroups.spawnEggTab));
-    public static final SpawnEggItem DIPLOCAULUS_SPAWN_EGG = new SpawnEggItem(ModEntities.DIPLOCAULUS, 0xaba621, 0x673c19, new FabricItemSettings().group(ModItemGroups.spawnEggTab));
+    public static final SpawnEggItem TORVOSAURUS_SPAWN_EGG = new SpawnEggItem(ModEntities.TORVOSAURUS, 0x8a604c, 0x392e29, new FabricItemSettings().group(ModItemGroups.spawnEggTab));
+    public static final SpawnEggItem DIPLOCAULUS_SPAWN_EGG = new SpawnEggItem(ModEntities.DIPLOCAULUS, 0x673c19, 0xaba621, new FabricItemSettings().group(ModItemGroups.spawnEggTab));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Prehistorica.MOD_ID, name), item);
@@ -52,7 +54,9 @@ public class ModItems {
         registerItem("amber_ore", AMBER_ORE);
         registerItem("deepslate_amber_ore", DEEPSLATE_AMBER_ORE);
         registerItem("analyzer", ANALYZER);
+        registerItem("dna_implementer", DNA_IMPLEMENTER);
         registerItem("incubator", INCUBATOR);
+        registerItem("microscope", MICROSCOPE);
         //Items
         registerItem("fossil", FOSSIL);
         registerItem("plant_fossil", PLANT_FOSSIL);

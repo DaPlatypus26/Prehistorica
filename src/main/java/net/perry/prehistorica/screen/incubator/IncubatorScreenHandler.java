@@ -9,7 +9,7 @@ import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
-import net.perry.prehistorica.screen.ModScreenHandlers;
+import net.perry.prehistorica.register.ModScreenHandlers;
 
 public class IncubatorScreenHandler extends ScreenHandler {
     private final Inventory inventory;
@@ -26,9 +26,9 @@ public class IncubatorScreenHandler extends ScreenHandler {
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new Slot(inventory, 0, 48, 23));
-        this.addSlot(new Slot(inventory, 1, 48, 44));
-        this.addSlot(new Slot(inventory, 2, 112, 34));
+        this.addSlot(new Slot(inventory, 0, 49, 24));
+        this.addSlot(new Slot(inventory, 1, 49, 45));
+        this.addSlot(new Slot(inventory, 2, 113, 35));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "prehistorica:block/diplocaulus_eggs"
+    "layer0": "prehistorica:item/microscope"
   }
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prehistorica:block/dna_implementer"
+    },
+    "facing=south": {
+      "model": "prehistorica:block/dna_implementer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prehistorica:block/dna_implementer",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "prehistorica:block/dna_implementer",
+      "y": 90
+    }
+  }
+}

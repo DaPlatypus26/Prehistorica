@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "prehistorica:block/dna_implementer_bottom",
+    "east": "prehistorica:block/dna_implementer_side",
+    "north": "prehistorica:block/dna_implementer_front",
+    "particle": "prehistorica:block/dna_implementer_side",
+    "south": "prehistorica:block/dna_implementer_side",
+    "up": "prehistorica:block/dna_implementer_top",
+    "west": "prehistorica:block/dna_implementer_side"
+  }
+}

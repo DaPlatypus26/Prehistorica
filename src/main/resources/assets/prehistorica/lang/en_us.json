@@ -3,6 +3,11 @@
   "block.prehistorica.deepslate_fossil_ore": "Deepslate Fossil Ore",
   "block.prehistorica.amber_ore": "Amber Ore",
   "block.prehistorica.deepslate_amber_ore": "Deepslate Amber Ore",
+  "block.prehistorica.sieve": "Sieve",
+  "block.prehistorica.analyzer": "Analyzer",
+  "block.prehistorica.dna_implementer": "DNA Implementer",
+  "block.prehistorica.incubator": "Incubator",
+  "block.prehistorica.microscope": "Microscope",
 
   "item.prehistorica.fossil": "Fossil",
   "item.prehistorica.plant_fossil": "Plant Fossil",

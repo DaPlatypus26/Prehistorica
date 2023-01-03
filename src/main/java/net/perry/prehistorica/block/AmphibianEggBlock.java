@@ -22,7 +22,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-public class AmphibianEgg extends Block {
+public class AmphibianEggBlock extends Block {
     private EntityType TADPOLE;
     private static final int MIN_TADPOLES = 2;
     private static final int MAX_TADPOLES = 5;
@@ -32,7 +32,7 @@ public class AmphibianEgg extends Block {
     private static int minHatchTime = 3600;
     private static int maxHatchTime = 12000;
 
-    public AmphibianEgg(EntityType entityType, AbstractBlock.Settings settings) {
+    public AmphibianEggBlock(EntityType entityType, AbstractBlock.Settings settings) {
         super(settings);
         TADPOLE = entityType;
     }

@@ -1,8 +1,7 @@
-package net.perry.prehistorica.block.entity.incubator;
+package net.perry.prehistorica.block.entity.dna_implementer;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -19,36 +18,35 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.perry.prehistorica.block.entity.ImplementedInventory;
-import net.perry.prehistorica.recipe.IncubatorRecipe;
+import net.perry.prehistorica.recipe.DnaImplementerRecipe;
 import net.perry.prehistorica.register.ModBlocksEntities;
-import net.perry.prehistorica.screen.incubator.IncubatorScreenHandler;
+import net.perry.prehistorica.screen.dna_implementer.DnaImplementerScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Objects;
 import java.util.Optional;
 
-public class IncubatorBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
+public class DnaImplementerBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
     private int maxProgress = 72;
 
-    public IncubatorBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlocksEntities.INCUBATOR, pos, state);
+    public DnaImplementerBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlocksEntities.DNA_IMPLEMENTER, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch(index) {
-                    case 0: return IncubatorBlockEntity.this.progress;
-                    case 1: return IncubatorBlockEntity.this.maxProgress;
+                    case 0: return DnaImplementerBlockEntity.this.progress;
+                    case 1: return DnaImplementerBlockEntity.this.maxProgress;
                     default: return 0;
                 }
             }
 
             public void set(int index, int value) {
                 switch(index) {
-                    case 0: IncubatorBlockEntity.this.progress = value; break;
-                    case 1: IncubatorBlockEntity.this.maxProgress = value; break;
+                    case 0: DnaImplementerBlockEntity.this.progress = value; break;
+                    case 1: DnaImplementerBlockEntity.this.maxProgress = value; break;
                 }
             }
 
@@ -65,27 +63,27 @@ public class IncubatorBlockEntity extends BlockEntity implements NamedScreenHand
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Incubator");
+        return Text.literal("DNA Implementer");
     }
 
     @Nullable
     @Override
     public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
-        return new IncubatorScreenHandler(syncId, inv, this, this.propertyDelegate);
+        return new DnaImplementerScreenHandler(syncId, inv, this, this.propertyDelegate);
     }
 
     @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("incubator.progress", progress);
+        nbt.putInt("implementing.progress", progress);
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
         Inventories.readNbt(nbt, inventory);
         super.readNbt(nbt);
-        progress = nbt.getInt("incubator.progress");
+        progress = nbt.getInt("implementing.progress");
     }
 
     private void resetProgress() {
@@ -102,7 +100,7 @@ public class IncubatorBlockEntity extends BlockEntity implements NamedScreenHand
         return side == Direction.DOWN && slot > 1;
     }
 
-    public static void tick(World world, BlockPos blockPos, BlockState state, IncubatorBlockEntity entity) {
+    public static void tick(World world, BlockPos blockPos, BlockState state, DnaImplementerBlockEntity entity) {
         if(world.isClient()) {
             return;
         }
@@ -119,14 +117,14 @@ public class IncubatorBlockEntity extends BlockEntity implements NamedScreenHand
         }
     }
 
-    private static void craftItem(IncubatorBlockEntity entity) {
+    private static void craftItem(DnaImplementerBlockEntity entity) {
         SimpleInventory inventory = new SimpleInventory(entity.size());
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<IncubatorRecipe> recipe = entity.getWorld().getRecipeManager()
-                .getFirstMatch(IncubatorRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<DnaImplementerRecipe> recipe = entity.getWorld().getRecipeManager()
+                .getFirstMatch(DnaImplementerRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
         if(hasRecipe(entity)) {
             ItemStack recipeRemainder0 = new ItemStack(entity.getStack(0).getItem().getRecipeRemainder());
@@ -152,14 +150,14 @@ public class IncubatorBlockEntity extends BlockEntity implements NamedScreenHand
         }
     }
 
-    private static boolean hasRecipe(IncubatorBlockEntity entity) {
+    private static boolean hasRecipe(DnaImplementerBlockEntity entity) {
         SimpleInventory inventory = new SimpleInventory(entity.size());
         for(int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
 
-        Optional<IncubatorRecipe> match = entity.getWorld().getRecipeManager()
-                .getFirstMatch(IncubatorRecipe.Type.INSTANCE, inventory, entity.getWorld());
+        Optional<DnaImplementerRecipe> match = entity.getWorld().getRecipeManager()
+                .getFirstMatch(DnaImplementerRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
         return match.isPresent() && canInsertItemIntoOutputSlot(inventory);
     }

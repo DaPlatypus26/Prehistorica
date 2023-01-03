@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:block/cube",
   "textures": {
-    "down": "prehistorica:block/analyzer",
-    "east": "prehistorica:block/analyzer",
-    "north": "prehistorica:block/analyzer_front",
-    "particle": "prehistorica:block/analyzer",
-    "south": "prehistorica:block/analyzer",
-    "up": "prehistorica:block/analyzer",
-    "west": "prehistorica:block/analyzer"
+    "down": "prehistorica:block/incubator_bottom",
+    "east": "prehistorica:block/incubator_side",
+    "north": "prehistorica:block/incubator_front",
+    "particle": "prehistorica:block/incubator_side",
+    "south": "prehistorica:block/incubator_side",
+    "up": "prehistorica:block/incubator_top",
+    "west": "prehistorica:block/incubator_side"
   }
 }

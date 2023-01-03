@@ -10,15 +10,14 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
-import net.perry.prehistorica.screen.incubator.IncubatorScreen;
 
-public class IncubatorRecipe implements Recipe<SimpleInventory> {
+public class DnaImplementerRecipe implements Recipe<SimpleInventory> {
 
     private final Identifier id;
     private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
 
-    public IncubatorRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
+    public DnaImplementerRecipe(Identifier id, ItemStack output, DefaultedList<Ingredient> recipeItems) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;
@@ -66,19 +65,19 @@ public class IncubatorRecipe implements Recipe<SimpleInventory> {
         return Type.INSTANCE;
     }
 
-    public static class Type implements RecipeType<IncubatorRecipe> {
+    public static class Type implements RecipeType<DnaImplementerRecipe> {
         private Type() { }
         public static final Type INSTANCE = new Type();
-        public static final String ID = "incubating";
+        public static final String ID = "implementing";
     }
 
-    public static class Serializer implements RecipeSerializer<IncubatorRecipe> {
+    public static class Serializer implements RecipeSerializer<DnaImplementerRecipe> {
         public static final Serializer INSTANCE = new Serializer();
-        public static final String ID = "incubating";
+        public static final String ID = "implementing";
         // this is the name given in the json file
 
         @Override
-        public IncubatorRecipe read(Identifier id, JsonObject json) {
+        public DnaImplementerRecipe read(Identifier id, JsonObject json) {
             ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
 
             JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
@@ -88,11 +87,11 @@ public class IncubatorRecipe implements Recipe<SimpleInventory> {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new IncubatorRecipe(id, output, inputs);
+            return new DnaImplementerRecipe(id, output, inputs);
         }
 
         @Override
-        public IncubatorRecipe read(Identifier id, PacketByteBuf buf) {
+        public DnaImplementerRecipe read(Identifier id, PacketByteBuf buf) {
             DefaultedList<Ingredient> inputs = DefaultedList.ofSize(buf.readInt(), Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
@@ -100,11 +99,11 @@ public class IncubatorRecipe implements Recipe<SimpleInventory> {
             }
 
             ItemStack output = buf.readItemStack();
-            return new IncubatorRecipe(id, output, inputs);
+            return new DnaImplementerRecipe(id, output, inputs);
         }
 
         @Override
-        public void write(PacketByteBuf buf, IncubatorRecipe recipe) {
+        public void write(PacketByteBuf buf, DnaImplementerRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.write(buf);

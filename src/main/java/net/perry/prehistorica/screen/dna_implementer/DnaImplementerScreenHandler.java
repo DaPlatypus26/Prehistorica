@@ -1,4 +1,4 @@
-package net.perry.prehistorica.screen.analyzer;
+package net.perry.prehistorica.screen.dna_implementer;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -11,40 +11,24 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.perry.prehistorica.register.ModScreenHandlers;
 
-public class AnalyzerScreenHandler extends ScreenHandler {
+public class DnaImplementerScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
 
-    public AnalyzerScreenHandler(int syncId, PlayerInventory inventory) {
-        this(syncId, inventory, new SimpleInventory(18), new ArrayPropertyDelegate(2));
+    public DnaImplementerScreenHandler(int syncId, PlayerInventory inventory) {
+        this(syncId, inventory, new SimpleInventory(3), new ArrayPropertyDelegate(2));
     }
 
-    public AnalyzerScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
-        super(ModScreenHandlers.ANALYZER_SCREEN_HANDLER, syncId);
+    public DnaImplementerScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
+        super(ModScreenHandlers.DNA_IMPLEMENTER_SCREEN_HANDLER, syncId);
         checkSize(inventory, 2);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new Slot(inventory, 0, 17, 19));
-        this.addSlot(new Slot(inventory, 1, 35, 19));
-        this.addSlot(new Slot(inventory, 2, 53, 19));
-        this.addSlot(new Slot(inventory, 3, 17, 37));
-        this.addSlot(new Slot(inventory, 4, 35, 37));
-        this.addSlot(new Slot(inventory, 5, 53, 37));
-        this.addSlot(new Slot(inventory, 6, 17, 55));
-        this.addSlot(new Slot(inventory, 7, 35, 55));
-        this.addSlot(new Slot(inventory, 8, 53, 55));
-
-        this.addSlot(new Slot(inventory, 9, 98, 19));
-        this.addSlot(new Slot(inventory, 10, 116, 19));
-        this.addSlot(new Slot(inventory, 11, 134, 19));
-        this.addSlot(new Slot(inventory, 12, 98, 37));
-        this.addSlot(new Slot(inventory, 13, 116, 37));
-        this.addSlot(new Slot(inventory, 14, 134, 37));
-        this.addSlot(new Slot(inventory, 15, 98, 55));
-        this.addSlot(new Slot(inventory, 16, 116, 55));
-        this.addSlot(new Slot(inventory, 17, 134, 55));
+        this.addSlot(new Slot(inventory, 0, 49, 24));
+        this.addSlot(new Slot(inventory, 1, 49, 45));
+        this.addSlot(new Slot(inventory, 2, 113, 35));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

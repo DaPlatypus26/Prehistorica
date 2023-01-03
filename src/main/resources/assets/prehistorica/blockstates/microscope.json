@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prehistorica:block/microscope"
+    },
+    "facing=south": {
+      "model": "prehistorica:block/microscope",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prehistorica:block/microscope",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "prehistorica:block/microscope",
+      "y": 90
+    }
+  }
+}

@@ -2,8 +2,10 @@
   "type": "prehistorica:incubating",
   "ingredients": [
     {
-      "item": "prehistorica:diplocaulus_eggs",
-      "item": "prehistorica:water_bucket"
+      "item": "prehistorica:diplocaulus_eggs"
+    },
+    {
+      "item": "minecraft:water_bucket"
     }
   ],
   "output": {

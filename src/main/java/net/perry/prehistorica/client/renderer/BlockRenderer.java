@@ -8,5 +8,6 @@ public class BlockRenderer {
 
     public static void blockRenderer() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DIPLOCAULUS_EGGS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MICROSCOPE, RenderLayer.getCutout());
     }
 }
