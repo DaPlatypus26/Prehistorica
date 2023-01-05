@@ -28,11 +28,7 @@ public class DnaImplementerRecipe implements Recipe<SimpleInventory> {
         if(world.isClient())
             return false;
 
-        if(recipeItems.get(0).test(inventory.getStack(0)) && recipeItems.get(1).test(inventory.getStack(1))) {
-            return true;
-        } else {
-            return false;
-        }
+        return recipeItems.get(0).test(inventory.getStack(0)) && recipeItems.get(1).test(inventory.getStack(1));
     }
 
     @Override

@@ -39,7 +39,7 @@ public class TorvosaurusRenderer extends GeoEntityRenderer<TorvosaurusEntity> {
     public RenderLayer getRenderType(TorvosaurusEntity animatable, float partialTicks, MatrixStack stack, @Nullable VertexConsumerProvider renderTypeBuffer,
                                      @Nullable VertexConsumer vertexBuilder, int packedLightIn, Identifier textureLocation) {
         if(animatable.isBaby()) {
-            stack.scale(0.5F, 0.5F, 0.5F);
+            stack.scale(0.25F, 0.25F, 0.25F);
         } else {
             stack.scale(1.0F, 1.0F, 1.0F);
         }

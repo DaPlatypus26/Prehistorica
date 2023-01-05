@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iNi",
+    "PPP",
+    "P P"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "N": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "prehistorica:sifter",
+    "count": 1
+  }
+}

@@ -24,6 +24,8 @@ import net.perry.prehistorica.register.ModBlocksEntities;
 import net.perry.prehistorica.screen.incubator.IncubatorScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 

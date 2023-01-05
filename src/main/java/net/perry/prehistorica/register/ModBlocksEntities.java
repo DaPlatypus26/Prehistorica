@@ -8,13 +8,20 @@ import net.perry.prehistorica.Prehistorica;
 import net.perry.prehistorica.block.entity.analyzer.AnalyzerBlockEntity;
 import net.perry.prehistorica.block.entity.dna_implementer.DnaImplementerBlockEntity;
 import net.perry.prehistorica.block.entity.incubator.IncubatorBlockEntity;
+import net.perry.prehistorica.block.entity.sifter.SifterBlockEntity;
 
 public class ModBlocksEntities {
+    public static BlockEntityType<SifterBlockEntity> SIFTER;
     public static BlockEntityType<AnalyzerBlockEntity> ANALYZER;
     public static BlockEntityType<DnaImplementerBlockEntity> DNA_IMPLEMENTER;
     public static BlockEntityType<IncubatorBlockEntity> INCUBATOR;
 
     public static void registerModBlockEntities() {
+        SIFTER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(Prehistorica.MOD_ID, "sifter"),
+                FabricBlockEntityTypeBuilder.create(SifterBlockEntity::new,
+                        ModBlocks.SIFTER).build(null));
+
         ANALYZER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(Prehistorica.MOD_ID, "analyzer"),
                 FabricBlockEntityTypeBuilder.create(AnalyzerBlockEntity::new,

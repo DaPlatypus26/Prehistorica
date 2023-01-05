@@ -6,9 +6,15 @@ import net.perry.prehistorica.Prehistorica;
 import net.perry.prehistorica.recipe.AnalyzerRecipe;
 import net.perry.prehistorica.recipe.DnaImplementerRecipe;
 import net.perry.prehistorica.recipe.IncubatorRecipe;
+import net.perry.prehistorica.recipe.SifterRecipe;
 
 public class ModRecipes {
     public static void registerModRecipes() {
+        Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(Prehistorica.MOD_ID, SifterRecipe.Serializer.ID),
+                SifterRecipe.Serializer.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, new Identifier(Prehistorica.MOD_ID, SifterRecipe.Type.ID),
+                SifterRecipe.Type.INSTANCE);
+
         Registry.register(Registry.RECIPE_SERIALIZER, new Identifier(Prehistorica.MOD_ID, AnalyzerRecipe.Serializer.ID),
                 AnalyzerRecipe.Serializer.INSTANCE);
         Registry.register(Registry.RECIPE_TYPE, new Identifier(Prehistorica.MOD_ID, AnalyzerRecipe.Type.ID),

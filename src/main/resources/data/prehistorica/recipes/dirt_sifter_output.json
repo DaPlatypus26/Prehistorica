@@ -1,0 +1,11 @@
+{
+  "type": "prehistorica:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    }
+  ],
+  "output": {
+    "item": "minecraft:dirt"
+  }
+}

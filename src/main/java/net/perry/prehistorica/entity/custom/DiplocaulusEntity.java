@@ -97,7 +97,7 @@ public class DiplocaulusEntity extends AnimalEntity implements IAnimatable {
 
     @Override
     public float getPathfindingFavor(BlockPos pos, WorldView world) {
-        return this.isTouchingWater() == world.getFluidState(pos).isIn(FluidTags.WATER) ? 10.0F : world.getBrightness(pos) - 0.5F;
+        return this.isTouchingWater() == world.getFluidState(pos).isIn(FluidTags.WATER) ? 10.0F : world.getLightLevel(pos) - 0.5F;
     }
 
     @Override
@@ -105,10 +105,10 @@ public class DiplocaulusEntity extends AnimalEntity implements IAnimatable {
         if (this.canMoveVoluntarily() && this.isTouchingWater()) {
             this.updateVelocity(0.1F, movementInput);
             this.move(MovementType.SELF, this.getVelocity());
-            this.setVelocity(this.getVelocity().multiply(0.9D));
-            if (this.getTarget() == null) {
+            this.setVelocity(this.getVelocity().multiply(0.6F));
+            /*if (this.getTarget() == null) {
                 this.addVelocity(0D, -0.005D, 0D);
-            }
+            }*/
         } else {
             super.travel(movementInput);
         }

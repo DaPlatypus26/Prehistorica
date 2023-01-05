@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:dirt",
+    "minecraft:wheat_seeds",
+    "minecraft:pumpkin_seeds",
+    "minecraft:melon_seeds",
+    "minecraft:beetroot_seeds",
+    "minecraft:potato",
+    "minecraft:carrot",
+    "minecraft:bone",
+    "minecraft:bone_meal",
+    "minecraft:iron_nugget",
+    "prehistorica:amber",
+    "prehistorica:bug_in_amber",
+    "prehistorica:plant_in_amber",
+    "prehistorica:mosquito_in_amber",
+    "prehistorica:plant_fossil",
+    "prehistorica:fossil"
+  ]
+}

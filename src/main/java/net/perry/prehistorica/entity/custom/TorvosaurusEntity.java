@@ -42,22 +42,21 @@ public class TorvosaurusEntity extends AnimalEntity implements IAnimatable {
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return AnimalEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 100.0D)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 6.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 1D)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0D)
-                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0D);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 100.0F)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3F)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 6.0F)
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 1.0F)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0F)
+                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0F);
     }
 
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new MeleeAttackGoal(this, 1.3D, false));
-        this.goalSelector.add(2, new FollowParentGoal(this, 0.45D));
-        this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.6D));
+        //this.goalSelector.add(1, new MeleeAttackGoal(this, 1.3F, false));
+        this.goalSelector.add(1, new AttackGoal(this));
+        this.goalSelector.add(2, new FollowParentGoal(this, 0.45F));
+        this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.6F));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.add(5, new LookAroundGoal(this));
-        this.goalSelector.add(6, new AttackGoal(this));
 
         this.targetSelector.add(0, new RevengeGoal(this));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));

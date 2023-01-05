@@ -21,7 +21,7 @@ public class ModEntities {
     public static final EntityType<TorvosaurusEntity> TORVOSAURUS = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(Prehistorica.MOD_ID, "torvosaurus"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, TorvosaurusEntity::new)
-                    .dimensions(EntityDimensions.fixed(3.0f, 3.0f)).build());
+                    .dimensions(EntityDimensions.fixed(2.0f, 3.0f)).build());
 
     private static void registerAttributes(EntityType entityType, DefaultAttributeContainer.Builder builder) {
         FabricDefaultAttributeRegistry.register(entityType, builder);

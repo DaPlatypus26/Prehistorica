@@ -28,7 +28,17 @@
             },
             {
               "type": "minecraft:item",
-              "name": "prehistorica:fossil",
+              "name": "minecraft:cobblestone",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -38,7 +48,17 @@
             },
             {
               "type": "minecraft:item",
-              "name": "prehistorica:plant_fossil",
+              "name": "minecraft:bone",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -48,7 +68,37 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:cobblestone",
+              "name": "prehistorica:plant_fossil",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 1.0
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "prehistorica:fossil",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",

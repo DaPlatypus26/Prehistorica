@@ -1,0 +1,11 @@
+{
+  "type": "prehistorica:sifting",
+  "ingredients": [
+    {
+      "item": "minecraft:sand"
+    }
+  ],
+  "output": {
+    "item": "minecraft:sand"
+  }
+}

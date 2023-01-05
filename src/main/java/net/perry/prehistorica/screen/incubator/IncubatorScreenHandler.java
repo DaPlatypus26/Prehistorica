@@ -26,9 +26,9 @@ public class IncubatorScreenHandler extends ScreenHandler {
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new Slot(inventory, 0, 49, 24));
-        this.addSlot(new Slot(inventory, 1, 49, 45));
-        this.addSlot(new Slot(inventory, 2, 113, 35));
+        this.addSlot(new Slot(inventory, 0, 48, 24));
+        this.addSlot(new Slot(inventory, 1, 48, 45));
+        this.addSlot(new Slot(inventory, 2, 112, 35));
 
         addPlayerInventory(playerInventory);
         addPlayerHotbar(playerInventory);

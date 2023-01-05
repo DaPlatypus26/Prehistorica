@@ -8,19 +8,24 @@ import net.perry.prehistorica.screen.dna_implementer.DnaImplementerScreen;
 import net.perry.prehistorica.screen.dna_implementer.DnaImplementerScreenHandler;
 import net.perry.prehistorica.screen.incubator.IncubatorScreen;
 import net.perry.prehistorica.screen.incubator.IncubatorScreenHandler;
+import net.perry.prehistorica.screen.sifter.SifterScreen;
+import net.perry.prehistorica.screen.sifter.SifterScreenHandler;
 
 public class ModScreenHandlers {
+    public static ScreenHandlerType<SifterScreenHandler> SIFTER_SCREEN_HANDLER;
     public static ScreenHandlerType<AnalyzerScreenHandler> ANALYZER_SCREEN_HANDLER;
     public static ScreenHandlerType<DnaImplementerScreenHandler> DNA_IMPLEMENTER_SCREEN_HANDLER;
     public static ScreenHandlerType<IncubatorScreenHandler> INCUBATOR_SCREEN_HANDLER;
 
     public static void registerScreenHandlers() {
+        SIFTER_SCREEN_HANDLER = new ScreenHandlerType<>(SifterScreenHandler::new);
         ANALYZER_SCREEN_HANDLER = new ScreenHandlerType<>(AnalyzerScreenHandler::new);
         DNA_IMPLEMENTER_SCREEN_HANDLER = new ScreenHandlerType<>(DnaImplementerScreenHandler::new);
         INCUBATOR_SCREEN_HANDLER = new ScreenHandlerType<>(IncubatorScreenHandler::new);
     }
 
     public static void registerHandledScreens() {
+        HandledScreens.register(SIFTER_SCREEN_HANDLER, SifterScreen::new);
         HandledScreens.register(ANALYZER_SCREEN_HANDLER, AnalyzerScreen::new);
         HandledScreens.register(DNA_IMPLEMENTER_SCREEN_HANDLER, DnaImplementerScreen::new);
         HandledScreens.register(INCUBATOR_SCREEN_HANDLER, IncubatorScreen::new);

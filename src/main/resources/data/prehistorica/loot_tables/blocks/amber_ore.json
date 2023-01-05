@@ -28,7 +28,17 @@
             },
             {
               "type": "minecraft:item",
-              "name": "prehistorica:amber",
+              "name": "minecraft:cobblestone",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -38,7 +48,17 @@
             },
             {
               "type": "minecraft:item",
-              "name": "prehistorica:mosquito_in_amber",
+              "name": "prehistorica:crab_in_amber",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -49,6 +69,16 @@
             {
               "type": "minecraft:item",
               "name": "prehistorica:bug_in_amber",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -58,7 +88,17 @@
             },
             {
               "type": "minecraft:item",
-              "name": "prehistorica:crab_in_amber",
+              "name": "prehistorica:amber",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -69,6 +109,16 @@
             {
               "type": "minecraft:item",
               "name": "prehistorica:plant_in_amber",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",
@@ -78,7 +128,17 @@
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:cobblestone",
+              "name": "prehistorica:mosquito_in_amber",
+              "functions": [
+                {
+                  "function": "minecraft:apply_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "formula": "minecraft:ore_drops"
+                },
+                {
+                  "function": "minecraft:explosion_decay"
+                }
+              ],
               "conditions": [
                 {
                   "condition": "minecraft:random_chance",

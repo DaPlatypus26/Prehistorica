@@ -37,7 +37,7 @@ public class IncubatorScreen extends HandledScreen<IncubatorScreenHandler> {
 
     private void renderProgressArrow(MatrixStack matrices, int x, int y) {
         if(handler.isCrafting()) {
-            drawTexture(matrices, x + 79, y + 34, 177, 0, handler.getScaledProgress(), 17);
+            drawTexture(matrices, x + 77, y + 34, 177, 0, handler.getScaledProgress(), 17);
         }
     }
 

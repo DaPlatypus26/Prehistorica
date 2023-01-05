@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_sand",
+    "minecraft:bone",
+    "minecraft:bone_meal",
+    "minecraft:iron_nugget",
+    "minecraft:gold_nugget",
+    "prehistorica:amber",
+    "prehistorica:bug_in_amber",
+    "prehistorica:crab_in_amber",
+    "prehistorica:plant_in_amber",
+    "prehistorica:mosquito_in_amber",
+    "prehistorica:plant_fossil",
+    "prehistorica:fossil"
+  ]
+}

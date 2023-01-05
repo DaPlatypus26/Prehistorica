@@ -5,14 +5,17 @@
     "minecraft:bone_meal",
     "minecraft:coal",
     "minecraft:flint",
-    "minecraft:dirt",
     "minecraft:sand",
+    "minecraft:gravel",
     "prehistorica:tyrannosaurus_rex_dna",
     "prehistorica:torvosaurus_dna",
     "prehistorica:stegosaurus_dna",
     "prehistorica:triceratops_dna",
+    "prehistorica:nodosaurus_dna",
+    "prehistorica:utahraptor_dna",
     "prehistorica:velociraptor_dna",
     "prehistorica:dilophosaurus_dna",
-    "prehistorica:diplocaulus_dna"
+    "prehistorica:diplocaulus_dna",
+    "prehistorica:ichthyostega_dna"
   ]
 }
