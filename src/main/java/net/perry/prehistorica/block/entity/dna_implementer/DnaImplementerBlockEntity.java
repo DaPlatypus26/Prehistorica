@@ -30,7 +30,7 @@ public class DnaImplementerBlockEntity extends BlockEntity implements NamedScree
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 144;
 
     public DnaImplementerBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlocksEntities.DNA_IMPLEMENTER, pos, state);

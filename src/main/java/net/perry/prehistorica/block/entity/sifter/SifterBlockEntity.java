@@ -36,7 +36,7 @@ public class SifterBlockEntity extends BlockEntity implements NamedScreenHandler
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 144;
 
     public SifterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlocksEntities.SIFTER, pos, state);

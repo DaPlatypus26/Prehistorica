@@ -1,14 +1,20 @@
 package net.perry.prehistorica.register;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.Material;
+import net.minecraft.block.OreBlock;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.perry.prehistorica.Prehistorica;
 import net.perry.prehistorica.block.AmphibianEggBlock;
+import net.perry.prehistorica.block.BigAnimalEggBlock;
 import net.perry.prehistorica.block.MicroscopeBlock;
+import net.perry.prehistorica.block.entity.HorizontalFacingBlock;
 import net.perry.prehistorica.block.entity.analyzer.AnalyzerBlock;
+import net.perry.prehistorica.block.entity.laboratory_cabinet.LaboratoryCabinetBlock;
 import net.perry.prehistorica.block.entity.dna_implementer.DnaImplementerBlock;
 import net.perry.prehistorica.block.entity.incubator.IncubatorBlock;
 import net.perry.prehistorica.block.entity.sifter.SifterBlock;
@@ -35,7 +41,12 @@ public class ModBlocks {
             .strength(4.0f).resistance(5.0F).sounds(BlockSoundGroup.METAL).requiresTool().nonOpaque());
     public static final Block MICROSCOPE = new MicroscopeBlock(FabricBlockSettings.of(Material.METAL, MapColor.GOLD)
             .strength(3.0f).resistance(5.0F).sounds(BlockSoundGroup.METAL).requiresTool().nonOpaque());
+    public static final Block LABORATORY_TABLE = new HorizontalFacingBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
+            .strength(4.0f).resistance(5.0F).sounds(BlockSoundGroup.WOOD).nonOpaque());
+    public static final Block LABORATORY_CABINET = new LaboratoryCabinetBlock(FabricBlockSettings.of(Material.WOOD, MapColor.OAK_TAN)
+            .strength(4.0f).resistance(5.0F).sounds(BlockSoundGroup.WOOD).nonOpaque());
     //Items
+    public static final BigAnimalEggBlock TORVOSAURUS_EGG = new BigAnimalEggBlock(ModEntities.TORVOSAURUS, FabricBlockSettings.of(Material.EGG, MapColor.BROWN).nonOpaque());
     public static final AmphibianEggBlock DIPLOCAULUS_EGGS = new AmphibianEggBlock(ModEntities.DIPLOCAULUS, FabricBlockSettings.of(Material.EGG, MapColor.BROWN)
             .noCollision().nonOpaque().breakInstantly().sounds(BlockSoundGroup.FROGSPAWN));
 
@@ -54,7 +65,10 @@ public class ModBlocks {
         registerBlock("dna_implementer", DNA_IMPLEMENTER);
         registerBlock("incubator", INCUBATOR);
         registerBlock("microscope", MICROSCOPE);
+        registerBlock("laboratory_table", LABORATORY_TABLE);
+        registerBlock("laboratory_cabinet", LABORATORY_CABINET);
 
+        registerBlock("torvosaurus_egg", TORVOSAURUS_EGG);
         registerBlock("diplocaulus_eggs", DIPLOCAULUS_EGGS);
     }
 }

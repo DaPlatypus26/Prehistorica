@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bone",
+    "minecraft:bone_meal",
+    "minecraft:coal",
+    "minecraft:flint",
+    "prehistorica:velociraptor_skull",
+    "prehistorica:dilophosaurus_skull",
+    "prehistorica:diplocaulus_skull"
+  ]
+}

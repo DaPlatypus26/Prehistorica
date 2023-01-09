@@ -35,7 +35,7 @@ public class AnalyzerBlockEntity extends BlockEntity implements NamedScreenHandl
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 144;
 
     public AnalyzerBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlocksEntities.ANALYZER, pos, state);

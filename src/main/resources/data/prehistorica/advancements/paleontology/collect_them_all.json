@@ -1,0 +1,51 @@
+{
+  "display": {
+    "icon": {
+      "item": "prehistorica:amber"
+    },
+    "title": {
+      "translate": "advancements.paleontology.collect_them_all.title"
+    },
+    "description": {
+      "translate": "advancements.paleontology.collect_them_all.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "prehistorica:paleontology/mosquito_in_amber",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "prehistorica:amber"
+            ]
+          },
+          {
+            "items": [
+              "prehistorica:mosquito_in_amber"
+            ]
+          },
+          {
+            "items": [
+              "prehistorica:plant_in_amber"
+            ]
+          },
+          {
+            "items": [
+              "prehistorica:crab_in_amber"
+            ]
+          },
+          {
+            "items": [
+              "prehistorica:bug_in_amber"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

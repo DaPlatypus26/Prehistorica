@@ -1,13 +1,13 @@
 package net.perry.prehistorica.register;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.PlaceableOnWaterItem;
-import net.minecraft.item.SpawnEggItem;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.*;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.perry.prehistorica.Prehistorica;
+import net.perry.prehistorica.item.FossilItem;
 
 public class ModItems {
     //Blocks
@@ -21,9 +21,11 @@ public class ModItems {
     public static final BlockItem DNA_IMPLEMENTER = new BlockItem(ModBlocks.DNA_IMPLEMENTER, new FabricItemSettings().group(ModItemGroups.blockTab));
     public static final BlockItem INCUBATOR = new BlockItem(ModBlocks.INCUBATOR, new FabricItemSettings().group(ModItemGroups.blockTab));
     public static final BlockItem MICROSCOPE = new BlockItem(ModBlocks.MICROSCOPE, new FabricItemSettings().group(ModItemGroups.blockTab));
+    public static final BlockItem LABORATORY_TABLE = new BlockItem(ModBlocks.LABORATORY_TABLE, new FabricItemSettings().group(ModItemGroups.blockTab));
+    public static final BlockItem LABORATORY_CABINET = new BlockItem(ModBlocks.LABORATORY_CABINET, new FabricItemSettings().group(ModItemGroups.blockTab));
 
     //Items
-    public static final Item FOSSIL = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
+    public static final Item FOSSIL = new FossilItem(new FabricItemSettings().group(ModItemGroups.itemTab));
     public static final Item PLANT_FOSSIL = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
     public static final Item AMBER = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
     public static final Item MOSQUITO_IN_AMBER = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
@@ -43,7 +45,14 @@ public class ModItems {
     public static final Item DIPLOCAULUS_DNA = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
     public static final Item ICHTHYOSTEGA_DNA = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
     //EGGS
+    public static final BlockItem TORVOSAURUS_EGG = new BlockItem(ModBlocks.TORVOSAURUS_EGG, new FabricItemSettings().group(ModItemGroups.itemTab));
     public static final BlockItem DIPLOCAULUS_EGGS = new PlaceableOnWaterItem(ModBlocks.DIPLOCAULUS_EGGS, new FabricItemSettings().group(ModItemGroups.itemTab));
+    //HATCHED
+    public static final Item DIPLOCAULUS_BUCKET = new EntityBucketItem(ModEntities.DIPLOCAULUS, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_AXOLOTL, new FabricItemSettings().group(ModItemGroups.itemTab));
+    //BONES
+    public static final Item VELOCIRAPTOR_SKULL = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
+    public static final Item DILOPHOSAURUS_SKULL = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
+    public static final Item DIPLOCAULUS_SKULL = new Item(new FabricItemSettings().group(ModItemGroups.itemTab));
 
     //SpawnEggs
     public static final SpawnEggItem TORVOSAURUS_SPAWN_EGG = new SpawnEggItem(ModEntities.TORVOSAURUS, 0x8a604c, 0x392e29, new FabricItemSettings().group(ModItemGroups.spawnEggTab));
@@ -65,6 +74,8 @@ public class ModItems {
         registerItem("dna_implementer", DNA_IMPLEMENTER);
         registerItem("incubator", INCUBATOR);
         registerItem("microscope", MICROSCOPE);
+        registerItem("laboratory_table", LABORATORY_TABLE);
+        registerItem("laboratory_cabinet", LABORATORY_CABINET);
         //Items
         registerItem("fossil", FOSSIL);
         registerItem("plant_fossil", PLANT_FOSSIL);
@@ -84,7 +95,12 @@ public class ModItems {
         registerItem("dilophosaurus_dna", DILOPHOSAURUS_DNA);
         registerItem("diplocaulus_dna", DIPLOCAULUS_DNA);
         registerItem("ichthyostega_dna", ICHTHYOSTEGA_DNA);
+        registerItem("torvosaurus_egg", TORVOSAURUS_EGG);
         registerItem("diplocaulus_eggs", DIPLOCAULUS_EGGS);
+        registerItem("diplocaulus_bucket", DIPLOCAULUS_BUCKET);
+        registerItem("velociraptor_skull", VELOCIRAPTOR_SKULL);
+        registerItem("dilophosaurus_skull", DILOPHOSAURUS_SKULL);
+        registerItem("diplocaulus_skull", DIPLOCAULUS_SKULL);
         //SpawnEggs
         registerItem("torvosaurus_spawn_egg", TORVOSAURUS_SPAWN_EGG);
         registerItem("diplocaulus_spawn_egg", DIPLOCAULUS_SPAWN_EGG);

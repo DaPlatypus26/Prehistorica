@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "prehistorica:plant_fossil"
+    },
+    "title": {
+      "translate": "advancements.paleontology.plant_fossil.title"
+    },
+    "description": {
+      "translate": "advancements.paleontology.plant_fossil.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "prehistorica:paleontology/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "prehistorica:plant_fossil"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

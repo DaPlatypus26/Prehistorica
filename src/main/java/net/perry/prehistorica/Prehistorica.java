@@ -22,6 +22,7 @@ public class Prehistorica implements ModInitializer {
         ModEntities.registerModAttributes();
         ModScreenHandlers.registerScreenHandlers();
         ModRecipes.registerModRecipes();
+        ModEvents.registerModEvents();
 
         new ModTags();
     }

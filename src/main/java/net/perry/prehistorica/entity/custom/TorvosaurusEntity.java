@@ -14,6 +14,7 @@ import net.minecraft.entity.mob.IllagerEntity;
 import net.minecraft.entity.mob.PillagerEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.raid.RaiderEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Util;
@@ -61,13 +62,12 @@ public class TorvosaurusEntity extends AnimalEntity implements IAnimatable {
         this.targetSelector.add(0, new RevengeGoal(this));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, VillagerEntity.class, true));
-        this.targetSelector.add(1, new ActiveTargetGoal<>(this, PillagerEntity.class, true));
+        this.targetSelector.add(1, new ActiveTargetGoal<>(this, RaiderEntity.class, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, HorseEntity.class, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, CowEntity.class, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, SheepEntity.class, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, GoatEntity.class, true));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PigEntity.class, true));
-        this.targetSelector.add(1, new ActiveTargetGoal<>(this, ChickenEntity.class, true));
     }
 
     @Override

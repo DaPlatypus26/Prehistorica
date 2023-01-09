@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:cauldron"
+    },
+    "title": {
+      "translate": "advancements.paleontology.wash_fossil.title"
+    },
+    "description": {
+      "translate": "advancements.paleontology.wash_fossil.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "prehistorica:paleontology/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "prehistorica:fossil"
+          ]
+        }
+      }
+    }
+  }
+}

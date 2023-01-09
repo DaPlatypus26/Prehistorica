@@ -1,0 +1,14 @@
+{
+  "type": "prehistorica:implementing",
+  "ingredients": [
+    {
+      "item": "prehistorica:torvosaurus_dna"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "output": {
+    "item": "prehistorica:torvosaurus_egg"
+  }
+}

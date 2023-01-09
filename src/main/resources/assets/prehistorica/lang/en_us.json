@@ -9,6 +9,8 @@
   "block.prehistorica.dna_implementer": "DNA Implementer",
   "block.prehistorica.incubator": "Incubator",
   "block.prehistorica.microscope": "Microscope",
+  "block.prehistorica.laboratory_table": "Laboratory Table",
+  "block.prehistorica.laboratory_cabinet": "Laboratory Cabinet",
 
   "item.prehistorica.fossil": "Fossil",
   "item.prehistorica.plant_fossil": "Plant Fossil",
@@ -28,7 +30,12 @@
   "item.prehistorica.dilophosaurus_dna": "Dilophosaurus DNA",
   "item.prehistorica.diplocaulus_dna": "Diplocaulus DNA",
   "item.prehistorica.ichthyostega_dna": "Ichthyostega DNA",
+  "block.prehistorica.torvosaurus_egg": "Torvosaurus Egg",
   "block.prehistorica.diplocaulus_eggs": "Diplocaulus Eggs",
+  "item.prehistorica.diplocaulus_bucket": "Bucket of Diplocaulus",
+  "item.prehistorica.velociraptor_skull": "Velociraptor Skull",
+  "item.prehistorica.dilophosaurus_skull": "Dilophosaurus Skull",
+  "item.prehistorica.diplocaulus_skull": "Diplocaulus Skull",
 
   "item.prehistorica.torvosaurus_spawn_egg": "Torvosaurus Spawn Egg",
   "item.prehistorica.diplocaulus_spawn_egg": "Diplocaulus Spawn Egg",
@@ -38,5 +45,24 @@
   "itemGroup.prehistorica.spawneggs": "Prehistorica Spawn Eggs",
 
   "entity.prehistorica.torvosaurus": "Torvosaurus",
-  "entity.prehistorica.diplocaulus": "Diplocaulus"
+  "entity.prehistorica.diplocaulus": "Diplocaulus",
+
+  "advancements.paleontology.root.title": "Paleontology",
+  "advancements.paleontology.root.description": "Let's explore the past!",
+  "advancements.paleontology.amber.title": "Fossilized Resin",
+  "advancements.paleontology.amber.description": "Mine some amber",
+  "advancements.paleontology.mosquito_in_amber.title": "Prehistoric Vampire",
+  "advancements.paleontology.mosquito_in_amber.description": "Get amber with a mosquito trapped inside",
+  "advancements.paleontology.collect_them_all.title": "Collect them All",
+  "advancements.paleontology.collect_them_all.description": "Get every amber variant",
+  "advancements.paleontology.plant_fossil.title": "Dried out",
+  "advancements.paleontology.plant_fossil.description": "Obtain a plant fossil",
+  "advancements.paleontology.frozen_tissue.title": "Too long in the freezer",
+  "advancements.paleontology.frozen_tissue.description": "Get a frozen tissue out of a permafrost block",
+  "advancements.paleontology.permafrost.title": "Icy Stone",
+  "advancements.paleontology.permafrost.description": "Mine a Permafrost block with a silk touch pickaxe",
+  "advancements.paleontology.wash_fossil.title": "Mr Washee Washee",
+  "advancements.paleontology.wash_fossil.description": "Wash a fossil in a water cauldron to obtain a dinosaur bone",
+  "advancements.paleontology.diplocaulus_skull.title": "Boomerang Skull",
+  "advancements.paleontology.diplocaulus_skull.description": "Obtain a Diplocaulus Skull"
 }

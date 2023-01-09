@@ -29,8 +29,6 @@ public class AmphibianEggBlock extends Block {
     private static final int MIN_HATCH_TIME = 3600;
     private static final int MAX_HATCH_TIME = 12000;
     protected static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 1.5, 16.0);
-    private static int minHatchTime = 3600;
-    private static int maxHatchTime = 12000;
 
     public AmphibianEggBlock(EntityType entityType, AbstractBlock.Settings settings) {
         super(settings);
@@ -51,7 +49,7 @@ public class AmphibianEggBlock extends Block {
     }
 
     private static int getHatchTime(Random random) {
-        return random.nextBetweenExclusive(minHatchTime, maxHatchTime);
+        return random.nextBetweenExclusive(MIN_HATCH_TIME, MAX_HATCH_TIME);
     }
 
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
@@ -89,7 +87,7 @@ public class AmphibianEggBlock extends Block {
     }
 
     private void spawnTadpoles(ServerWorld world, BlockPos pos, Random random) {
-        int i = random.nextBetweenExclusive(2, 6);
+        int i = random.nextBetweenExclusive(MIN_TADPOLES, MAX_TADPOLES);
 
         for(int j = 1; j <= i; ++j) {
             AnimalEntity tadpoleEntity = (AnimalEntity)TADPOLE.create(world);
@@ -105,17 +103,5 @@ public class AmphibianEggBlock extends Block {
     private double getSpawnOffset(Random random) {
         double d = (double)(TadpoleEntity.WIDTH / 2.0F);
         return MathHelper.clamp(random.nextDouble(), d, 1.0 - d);
-    }
-
-    @VisibleForTesting
-    public static void setHatchTimeRange(int min, int max) {
-        minHatchTime = min;
-        maxHatchTime = max;
-    }
-
-    @VisibleForTesting
-    public static void resetHatchTimeRange() {
-        minHatchTime = 3600;
-        maxHatchTime = 12000;
     }
 }

@@ -1,15 +1,17 @@
 package net.perry.prehistorica.block.entity.incubator;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.EntityBucketItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.*;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
@@ -18,23 +20,22 @@ import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import net.perry.prehistorica.block.AmphibianEggBlock;
 import net.perry.prehistorica.block.entity.ImplementedInventory;
 import net.perry.prehistorica.recipe.IncubatorRecipe;
 import net.perry.prehistorica.register.ModBlocksEntities;
 import net.perry.prehistorica.screen.incubator.IncubatorScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
+import java.util.Random;
 
 public class IncubatorBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3, ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 144;
 
     public IncubatorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlocksEntities.INCUBATOR, pos, state);
@@ -147,8 +148,18 @@ public class IncubatorBlockEntity extends BlockEntity implements NamedScreenHand
                 entity.getWorld().spawnEntity(new ItemEntity(entity.getWorld(), entity.getPos().getX(),
                         entity.getPos().getY() + 1, entity.getPos().getZ(), recipeRemainder1));
 
-            entity.setStack(2, new ItemStack(recipe.get().getOutput().getItem(),
-                    entity.getStack(2).getCount() + 1));
+            Item output = recipe.get().getOutput().getItem();
+            ItemStack outputItemStack = new ItemStack(output, entity.getStack(2).getCount() + 1);
+            if(output instanceof EntityBucketItem) {
+                NbtCompound ageNbt = new NbtCompound();
+                ageNbt.putInt("Age", -24000);
+                NbtCompound entityNbt = new NbtCompound();
+                entityNbt.putString("EntityTag", "");
+                outputItemStack.setNbt(entityNbt);
+                outputItemStack.setSubNbt("EntityTag", ageNbt);
+            }
+
+            entity.setStack(2, outputItemStack);
 
             entity.resetProgress();
         }

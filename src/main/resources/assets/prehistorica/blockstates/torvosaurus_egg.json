@@ -1,0 +1,157 @@
+{
+  "variants": {
+    "eggs=1,hatch=0": [
+      {
+        "model": "prehistorica:block/torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=1,hatch=1": [
+      {
+        "model": "prehistorica:block/slightly_cracked_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/slightly_cracked_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/slightly_cracked_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/slightly_cracked_torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=1,hatch=2": [
+      {
+        "model": "prehistorica:block/very_cracked_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/very_cracked_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/very_cracked_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/very_cracked_torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=2,hatch=0": [
+      {
+        "model": "prehistorica:block/two_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/two_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/two_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/two_torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=2,hatch=1": [
+      {
+        "model": "prehistorica:block/two_slightly_cracked_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/two_slightly_cracked_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/two_slightly_cracked_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/two_slightly_cracked_torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=2,hatch=2": [
+      {
+        "model": "prehistorica:block/two_very_cracked_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/two_very_cracked_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/two_very_cracked_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/two_very_cracked_torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=3,hatch=0": [
+      {
+        "model": "prehistorica:block/three_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/three_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/three_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/three_torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=3,hatch=1": [
+      {
+        "model": "prehistorica:block/three_slightly_cracked_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/three_slightly_cracked_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/three_slightly_cracked_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/three_slightly_cracked_torvosaurus_egg",
+        "y": 270
+      }
+    ],
+    "eggs=3,hatch=2": [
+      {
+        "model": "prehistorica:block/three_very_cracked_torvosaurus_egg"
+      },
+      {
+        "model": "prehistorica:block/three_very_cracked_torvosaurus_egg",
+        "y": 90
+      },
+      {
+        "model": "prehistorica:block/three_very_cracked_torvosaurus_egg",
+        "y": 180
+      },
+      {
+        "model": "prehistorica:block/three_very_cracked_torvosaurus_egg",
+        "y": 270
+      }
+    ]
+  }
+}

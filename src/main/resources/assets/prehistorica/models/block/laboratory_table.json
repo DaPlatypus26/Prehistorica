@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "east": "prehistorica:block/laboratory_table",
+    "north": "prehistorica:block/laboratory_table",
+    "particle": "prehistorica:block/laboratory_table",
+    "south": "prehistorica:block/laboratory_table",
+    "up": "prehistorica:block/laboratory_table_top",
+    "west": "prehistorica:block/laboratory_table"
+  }
+}

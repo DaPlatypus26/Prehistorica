@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "prehistorica:block/laboratory_cabinet"
+    },
+    "facing=south": {
+      "model": "prehistorica:block/laboratory_cabinet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "prehistorica:block/laboratory_cabinet",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "prehistorica:block/laboratory_cabinet",
+      "y": 90
+    }
+  }
+}
